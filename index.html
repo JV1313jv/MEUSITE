@@ -1,154 +1,104 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Use Charme | Moda Fitness</title>
-
-<style>
 body{
     margin:0;
-    font-family: Arial, sans-serif;
-    background:#fff;
+    font-family: 'Georgia', serif;
+    background:#f7f4ef;
+    color:#232F63;
 }
 
 /* topo */
 header{
-    background: linear-gradient(135deg,#ff2e93,#ff6bb5);
-    color:white;
+    background:#232F63;
+    color:#E8E0D5;
     text-align:center;
-    padding:40px 20px;
+    padding:50px 20px;
+}
+
+.logo{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:20px;
 }
 
 header h1{
     margin:0;
-    font-size:40px;
-    letter-spacing:1px;
+    font-size:42px;
+    font-weight:normal;
 }
 
 header p{
+    opacity:.9;
     margin-top:10px;
-    opacity:0.9;
 }
 
-/* botão insta */
 .insta{
-    margin-top:15px;
     display:inline-block;
-    background:white;
-    color:#ff2e93;
-    padding:10px 20px;
-    border-radius:20px;
+    margin-top:20px;
+    background:#E8E0D5;
+    color:#232F63;
+    padding:12px 25px;
+    border-radius:30px;
     text-decoration:none;
     font-weight:bold;
 }
 
 /* catálogo */
 .container{
+    max-width:1200px;
+    margin:auto;
     display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap:20px;
-    padding:20px;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    padding:40px 20px;
 }
 
-/* produto */
 .card{
-    border:1px solid #eee;
-    border-radius:15px;
-    overflow:hidden;
     background:white;
-    box-shadow:0 5px 15px rgba(0,0,0,0.05);
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
 }
 
 .card img{
     width:100%;
-    height:250px;
+    height:320px;
     object-fit:cover;
 }
 
 .card h3{
-    margin:10px;
+    margin:15px;
 }
 
 .price{
-    color:#ff2e93;
+    margin:0 15px 15px;
+    color:#232F63;
+    font-size:22px;
     font-weight:bold;
-    margin:0 10px 10px;
 }
 
-/* botão whatsapp */
 button{
     width:100%;
-    padding:12px;
+    padding:15px;
     border:none;
-    background:#25D366;
+    background:#232F63;
     color:white;
     font-size:16px;
     cursor:pointer;
 }
 
 button:hover{
-    background:#1ebe5d;
+    background:#182149;
 }
 
-/* rodapé */
 footer{
+    background:#232F63;
+    color:#E8E0D5;
     text-align:center;
-    padding:20px;
-    font-size:14px;
-    color:#777;
+    padding:25px;
 }
-</style>
-</head>
-
-<body>
-
-<header>
-    <h1>💖 Use Charme</h1>
-    <p>Moda fitness feminina que valoriza você</p>
-
-    <a class="insta" href="https://www.instagram.com/_usecharme_/" target="_blank">
-        📲 Ver Instagram
-    </a>
-</header>
-
-<div class="container">
-
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1514996937319-344454492b37" />
-        <h3>Conjunto Fitness Pink</h3>
-        <p class="price">R$ 129,90</p>
-        <button onclick="buy('Conjunto Fitness Pink')">Comprar no WhatsApp</button>
-    </div>
-
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a" />
-        <h3>Legging Modeladora</h3>
-        <p class="price">R$ 99,90</p>
-        <button onclick="buy('Legging Modeladora')">Comprar no WhatsApp</button>
-    </div>
-
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1520975918310-3c5f3f3f4d4f" />
-        <h3>Top Fitness Premium</h3>
-        <p class="price">R$ 59,90</p>
-        <button onclick="buy('Top Fitness Premium')">Comprar no WhatsApp</button>
-    </div>
-
-</div>
-
-<footer>
-    © 2026 Use Charme - Moda Fitness
-</footer>
-
-<script>
-function buy(product){
-    let number = "55SEUNUMEROAQUI";
-    let msg = "Olá! Quero comprar: " + product;
-    let url = "https://wa.me/" + number + "?text=" + encodeURIComponent(msg);
-    window.open(url, "_blank");
-}
-</script>
-
-</body>
-</html>
